@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.vite{
+    text-decoration: line-through;
+}
