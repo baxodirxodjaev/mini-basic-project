@@ -46,7 +46,7 @@ const CardQuestions = () => {
     
 
   return (
-    <div className="container mx-auto mt-6 ">
+    <div className="container mx-auto mt-9 ">
         <hr />
         <div className="flex flex-wrap justify-center mt-3">
             {questions.map((question) => (

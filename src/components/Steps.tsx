@@ -25,7 +25,7 @@ const Steps = () => {
     <>
     <button 
       onClick={()=>setIsOpen(!isOpen)}
-      className='mt-2 mx-6 flex items-center justify-center bg-black text-white rounded-2xl px-3 hover:text-orange-300' >
+      className='mt-2 mx-6 flex items-center justify-center bg-black text-white rounded-2xl px-4 py-2 hover:text-orange-300' >
       {isOpen ? "close" : "open"}
     </button>
   

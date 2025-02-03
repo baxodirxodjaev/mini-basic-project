@@ -37,20 +37,20 @@ const Counter = () => {
             <div className="flex items-center justify-center gap-4">
                 <button 
                 onClick={handleCountMinus}
-                className=" cursor-pointer flex items-center justify-center text-4xl font-extrabold text-yellow-700">-</button>
+                className=" cursor-pointer pb-2 text-4xl font-extrabold text-yellow-700">-</button>
                 <p className="text-xl font-bold text-center">Count: {count}</p>
                 <button
                  onClick={handleCount}
-                 className="cursor-pointer flex items-center justify-center text-4xl font-extrabold text-yellow-700">+</button>
+                 className="cursor-pointer pb-2 text-4xl font-extrabold text-yellow-700">+</button>
             </div>
             <div className="flex items-center justify-center gap-4">
             <button
                  onClick={handleDoubleCountMinus}
-                 className="cursor-pointer flex items-center justify-center text-4xl font-extrabold text-yellow-700">-</button>
+                 className="cursor-pointer pb-2 text-4xl font-extrabold text-yellow-700">-</button>
                 <p className="text-xl font-bold text-center">Double count: {doubleCount}</p>
                 <button
                     onClick={handleDoubleCount}
-                    className="cursor-pointer flex items-center justify-center text-4xl font-extrabold text-yellow-700">+</button>
+                    className="cursor-pointer pb-2 text-4xl font-extrabold text-yellow-700">+</button>
             </div>
         </div>
         <p className="font-light text-end mt-3">{currentDate()}</p>
