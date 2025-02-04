@@ -6,17 +6,21 @@ interface PackListProps {
     packs: TravelPaks[];
     checkPack : (id : number) => void;
     deletePack : (id: number) => void;
+    sortBy : string
 }
 
 
-const PackList = ({packs ,checkPack, deletePack } : PackListProps) => {
+const PackList = ({packs ,checkPack, deletePack, sortBy } : PackListProps) => {
 
-   
+    let sortedPacks: TravelPaks[] = [];
+        if(sortBy === "input") sortedPacks = packs;
+        if(sortBy === "name") sortedPacks = packs.slice().sort((a,b) => a.name.localeCompare(b.name));
+        if(sortBy === "packed") sortedPacks = packs.slice().sort((a,b) => Number(a.packed)- Number(b.packed));
 
   return (
     <ul className="flex flex-wrap items-center justify-start  mt-5 my-5 bg-amber-50 shadow-xl rounded-md">
         {
-            packs && packs.map((pack) => <li key={pack.id}
+            sortedPacks.map((pack) => <li key={pack.id}
                  className={`${pack.packed && 'line-through'} flex items-center justify-center gap-2 my-2 mx-7`}>
                 <span className="flex items-center justify-center"><input
                     onChange={() => checkPack(pack.id)}

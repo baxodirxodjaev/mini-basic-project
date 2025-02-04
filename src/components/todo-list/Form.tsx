@@ -30,11 +30,14 @@ const Form = ({onAddPack} : FormProps ) => {
 
   return (
     <form 
-        className=" mx-auto  flex flex-wrap items-center justify-center gap-[25px] mt-5" 
+        className=" mx-auto  flex flex-wrap items-center justify-center  mt-5" 
         onSubmit={(e)=>handleAddPack(e)}>
-        <label className="text-xl font-light font">What do you need for your trip?</label>
+        <label
+            htmlFor="name"
+             className="text-xl font-light font mr-5 w-full md:w-fit text-center mb-3 md:mb-0  mt-3 ">What do you need for your trip?</label>
         <select 
-            className="outline outline-cyan-800 rounded-sm px-2"
+            name="checkbox"
+            className="outline outline-cyan-800 rounded-sm px-2 py-1 mr-2  mt-3 "
             value={inpQuantity}
             onChange={(e)=>setInpQuantity(Number(e.target.value))}>
             {
@@ -44,14 +47,16 @@ const Form = ({onAddPack} : FormProps ) => {
             }
         </select>
         <input
+          id="name"
           required
           value={inpName}        
           onChange={(e)=>setInpName(e.target.value)}
           type="text"
           placeholder="Item..."
-          className="outline outline-emerald-800 rounded-sm px-2"
+          className="outline outline-emerald-800 rounded-sm px-2 mr-4 py-1  mt-3 "
            />
-        <button className="px-4 py-1 bg-green-600 font-medium rounded-md text-slate-800 hover:text-white hover:bg-green-700">Add</button>
+        <button
+             className="px-4 mt-3  py-1 bg-green-600 font-medium rounded-md text-slate-800 hover:text-white hover:bg-green-700">Add</button>
         <p className="text-red-400 font-normal text-sm" id="alert"></p>
     </form>
   )
